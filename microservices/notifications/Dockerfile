@@ -8,7 +8,7 @@ RUN npm ci --only=production
 COPY . .
 
 ENV NODE_ENV=production
-ENV PORT=5000
-EXPOSE 5000
+ENV NOTIFI_PORT=4002
+EXPOSE 4002
 
-CMD ["node", "server.js"]
+CMD ["node", "index.js"]
