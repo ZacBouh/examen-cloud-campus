@@ -7,6 +7,7 @@ const connectDB = require('./config/db');
 const app = express();
 connectDB();
 
+// CORS trop permissive pour une application notamment en prod, on utilise un variable d' enviromment
 app.use(cors());
 app.use(express.json());
 app.use('/api/products', require('./routes/productRoutes'));

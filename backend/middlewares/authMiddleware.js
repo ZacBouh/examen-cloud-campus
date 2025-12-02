@@ -4,6 +4,7 @@ const jwt = require('jsonwebtoken');
 exports.authenticateToken = (req, res, next) => {
 
   const token = req.headers['authorization']?.split(' ')[1];
+  // Ca represente un risque et une mauvaise pratique d'imprimer dans les logs des donnees sensible comme un token d'authentitification
   console.log(`token is ${token}`)
   if (!token) return res.sendStatus(401);
 
